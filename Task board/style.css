@@ -1,0 +1,126 @@
+body{
+    margin:5px;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.items {
+    padding: 0;
+    margin:15px;
+}
+
+
+.container{
+    position: relative;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: gray;
+}
+
+
+.container .items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(50, auto));
+    grid-auto-flow: dense;
+    grid-gap:4px;
+    justify-content: center;
+    margin:0 auto;
+    padding: 0;
+}
+
+.container .items {
+    position: relative;
+}
+
+
+img{
+  
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+    
+}
+
+.items>div{
+    border-style: solid;
+    border-color: hsl(89, 43%, 51%);
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.profileimage{
+    float:right;
+}
+
+
+.container{
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5%;
+}
+
+.todo{
+    display: table-cell;
+}
+
+.progress{
+    display: table-cell;
+}
+
+.test{
+    display: table-cell;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .container{
+      grid-template-areas: 
+      'todo'
+      'progress'
+      'test';
+
+      height: 350vh;
+
+      
+    }
+
+    img{
+  
+        width: 25px;
+        height: 25px;
+        
+        
+    }
+
+    p{
+        font-size: 0.5em;
+    }
+
+  
+
+    .items {
+        padding: 0;
+        margin:5px;
+    }
+
+    .todo, .progress, .test{
+         display:inline-block;
+        padding: 0;     
+         margin: 0;
+
+    }
+    
+   
+}
